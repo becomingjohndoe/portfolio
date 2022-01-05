@@ -10,8 +10,8 @@ export const Header = () => {
 						<h3 className="hero-title">a full stack developer</h3>
 					</div>
 					<h4 class="header-info">
-						I’m also a front-end developer and general doodler with a keen eye for
-						creating engaging UI, bringing products to life.
+						with a passion for creating beautiful, functional, and user-friendly
+						applications
 					</h4>
 				</Col>
 				<Col lg="6">

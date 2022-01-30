@@ -11,7 +11,7 @@ export const WorkCard = () => {
 		<Container>
 			<Row>
 				<Col>
-					<a href="https://github.com/becomingjohndoe/news-api" target="_blank">
+					<a href="https://github.com/becomingjohndoe/wordle-clone" target="_blank">
 						<div className="work-container">
 							<div className="work-details">
 								<span>WIP...Web App</span>

@@ -4,12 +4,22 @@ import giggleImage from "../assets/images/giggle-app-main-showcase.png";
 import toppitImage from "../assets/images/toppit.png";
 import toppitAPIImage from "../assets/images/toppit-api.png";
 import paper from "../assets/images/paper-stocks.png";
+import wordle from "../assets/images/not-wordle.png";
 export const WorkCard = () => {
 	let navigate = useNavigate();
 	return (
 		<Container>
 			<Row>
 				<Col>
+					<a href="https://github.com/becomingjohndoe/news-api" target="_blank">
+						<div className="work-container">
+							<div className="work-details">
+								<span>WIP...Web App</span>
+								<h2 className="work-header">Not Wordle</h2>
+							</div>
+							<img src={wordle} alt="" className="work-app-image" />
+						</div>
+					</a>
 					<a href="https://github.com/becomingjohndoe/paper-stocks" target="_blank">
 						<div className="work-container">
 							<div className="work-details">

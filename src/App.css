@@ -109,7 +109,8 @@
 
 .work-web-image {
 	width: 654px;
-	padding-bottom: 4em;
+	/* padding-bottom: 4em; */
+	border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
 	.work-web-image {

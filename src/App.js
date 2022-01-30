@@ -6,13 +6,11 @@ import { WorkCard } from "./components/WorkCard";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<div className="App">
-				<NavBar />
-				<Header />
-				<WorkCard />
-			</div>
-		</BrowserRouter>
+		<div className="App">
+			<NavBar />
+			<Header />
+			<WorkCard />
+		</div>
 	);
 }
 

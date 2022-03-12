@@ -11,12 +11,17 @@ export const NavBar = () => {
 		<Navbar variant="dark">
 			<Container>
 				<Nav>
-					<Nav.Link href="/#" active>
-						Work
+					<Nav.Link>
+						<Link to="/">Work</Link>
 					</Nav.Link>
-					<Nav.Link href="#about">About</Nav.Link>
+					<Nav.Link>
+						<Link to="/about">About</Link>
+					</Nav.Link>
 					<Nav.Link href="#contact">Contact</Nav.Link>
 				</Nav>
+				<Nav.Link>
+					<Link to="/Desktop">WIP</Link>
+				</Nav.Link>
 				<Navbar.Brand href="#home">
 					<img
 						alt=""

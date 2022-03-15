@@ -10,7 +10,6 @@ const style = {
 	overflow: "hidden",
 	zIndex: "1",
 	maxWidth: "500px",
-	maxHeight: "500px",
 	position: "absolute",
 };
 
@@ -31,7 +30,7 @@ const buttonDescStyle = {
 	padding: "5px",
 };
 
-const Icon = () => {
+const Icon = ({ children }) => {
 	const [show, setShow] = React.useState(false);
 	return (
 		<>
@@ -64,7 +63,7 @@ const Icon = () => {
 								X
 							</button>{" "}
 						</div>
-						<Header />
+						{children}
 					</div>
 				</Draggable>
 			) : (

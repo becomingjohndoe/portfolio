@@ -24,20 +24,22 @@ const buttonStyle = {
 	position: "relative",
 	borderRadius: "50%",
 	width: "50px",
+	height: "50px",
+	backgroundColor: "#fff",
 };
 
 const Icon = () => {
 	const [show, setShow] = React.useState(false);
 	return (
 		<>
-			<button
+			<div
 				style={buttonStyle}
 				onClick={() => {
 					setShow(true);
 				}}
 			>
 				show
-			</button>
+			</div>
 			{show ? (
 				<Draggable
 					handle=".handle"

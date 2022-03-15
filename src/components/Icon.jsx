@@ -5,27 +5,30 @@ import { Header } from "../components/Header";
 
 const style = {
 	border: "1px solid #eee",
-	height: "250px",
-	width: "250px",
 	backgroundColor: "white",
 	borderRadius: "5px",
 	overflow: "hidden",
-	position: "absolute",
 	zIndex: "1",
-};
-
-const xstyle = {
-	position: "fixed",
-	top: 0,
-	left: 0,
+	maxWidth: "500px",
+	maxHeight: "500px",
+	position: "absolute",
 };
 
 const buttonStyle = {
-	position: "relative",
 	borderRadius: "50%",
-	width: "50px",
-	height: "50px",
+	width: "70px",
+	height: "70px",
 	backgroundColor: "#fff",
+	border: "1px solid #eee",
+	padding: "10px",
+};
+
+const buttonDescStyle = {
+	width: "70px",
+	height: "25px",
+	color: "#fff",
+	textAlign: "center",
+	padding: "5px",
 };
 
 const Icon = () => {
@@ -37,9 +40,8 @@ const Icon = () => {
 				onClick={() => {
 					setShow(true);
 				}}
-			>
-				show
-			</div>
+			></div>
+			<div style={buttonDescStyle}>show</div>
 			{show ? (
 				<Draggable
 					handle=".handle"
@@ -51,10 +53,10 @@ const Icon = () => {
 					onStop={Draggable.handleStop}
 				>
 					<div style={style}>
-						<div className="handle">
+						<div className="handle window-header">
 							Drag from here{" "}
 							<button
-								style={xstyle}
+								className="window-x"
 								onClick={() => {
 									setShow(false);
 								}}
@@ -62,11 +64,12 @@ const Icon = () => {
 								X
 							</button>{" "}
 						</div>
-						<div>This readme is really dragging on...</div>
 						<Header />
 					</div>
 				</Draggable>
-			) : null}
+			) : (
+				<></>
+			)}
 		</>
 	);
 };

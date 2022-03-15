@@ -2,7 +2,9 @@ import Icon from "../components/Icon";
 
 const iconStyle = {
 	display: "flex",
-	flexdirection: "column",
+	height: "100vh",
+	width: "200px",
+	flexFlow: "column wrap",
 };
 
 const Desktop = () => {

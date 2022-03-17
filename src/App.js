@@ -8,7 +8,7 @@ import Desktop from "./pages/Desktop";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App overflow-hidden h-screen">
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />

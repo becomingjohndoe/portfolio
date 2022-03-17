@@ -1,36 +1,48 @@
-import { Header } from "../components/Header";
+import { useRef } from "react";
 import Icon from "../components/Icon";
 import MusicPlayer from "../components/MusicPlayer";
 import Settings from "../components/Settings";
+import Window from "../components/Window";
 import About from "./About";
 
 const Desktop = () => {
+	const desktop = useRef(null);
 	return (
 		<>
-			{/* icon bar */}
-			<div className="h-16 w-full bg-slate-700 absolute bottom-2 z-50 opacity-80 px-4"></div>
 			{/* desktop */}
-			<div className="relative h-full justify-center flex flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-				{/* icon set */}
-				<Icon
-					name="About Me"
-					image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
-				>
-					<About />{" "}
-				</Icon>
+			<div
+				ref={desktop}
+				className="bounds justify-center flex flex-row h-full relative"
+			>
+				<Window name="About">
+					<About />
+				</Window>
+			</div>
+			<div className="h-min flex flex-col content-center">
+				{/* icon bar */}
+				<div className="h-auto w-auto flex bg-slate-700 z-50 opacity-70 justify-center rounded-lg relative mx-4">
+					{/* icon set */}
+					<Icon
+						name="About Me"
+						image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
+						desktop={desktop}
+					></Icon>
 
-				<Icon
-					name="Music"
-					image="https://cdn-icons-png.flaticon.com/512/4497/4497920.png"
-				>
-					<MusicPlayer />
-				</Icon>
-				<Icon
-					name="Settings"
-					image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
-				>
-					<Settings />
-				</Icon>
+					<Icon
+						name="Music"
+						image="https://cdn-icons-png.flaticon.com/512/4497/4497920.png"
+						desktop={desktop}
+					>
+						<MusicPlayer />
+					</Icon>
+					<Icon
+						name="Settings"
+						image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
+						desktop={desktop}
+					>
+						<Settings />
+					</Icon>
+				</div>
 			</div>
 		</>
 	);

@@ -3,7 +3,7 @@ import headshot from "../assets/images/headshot.png";
 const About = () => {
 	return (
 		<figure className=" md:flex bg-gradient-to-r from-cyan-500 to-orange-100 pl-6 dark:from-slate-500 dark:to-teal-900 m-0">
-			<img className=" w-32 h-32 rounded-full m-auto" src={headshot} alt="" />
+			<img className=" w-32 h-32 rounded-full m-auto" src="" alt="" />
 			<div className="p-8 text-center md:text-left">
 				<blockquote>
 					<p className="text-lg text-left font-medium overflow-scroll max-h-48 max-w-sm dark:text-slate-100">

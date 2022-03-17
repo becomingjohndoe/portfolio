@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Icon from "../components/Icon";
 import MusicPlayer from "../components/MusicPlayer";
 import Settings from "../components/Settings";
+import Window from "../components/Window";
 import About from "./About";
 
 const Desktop = () => {
@@ -11,18 +12,21 @@ const Desktop = () => {
 			{/* desktop */}
 			<div
 				ref={desktop}
-				className="bounds justify-center flex flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-8 h-screen max-h-screen"
+				className="bounds justify-center flex flex-row h-full relative"
 			>
+				<Window name="About">
+					<About />
+				</Window>
+			</div>
+			<div className="h-min flex flex-col content-center">
 				{/* icon bar */}
-				<div className="h-auto w-full flex self-end bg-slate-700 z-50 opacity-80 mb-10 mx-4 px-4 justify-center rounded-lg">
+				<div className="h-auto w-auto flex bg-slate-700 z-50 opacity-70 justify-center rounded-lg relative mx-4">
 					{/* icon set */}
 					<Icon
 						name="About Me"
 						image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
 						desktop={desktop}
-					>
-						<About />
-					</Icon>
+					></Icon>
 
 					<Icon
 						name="Music"

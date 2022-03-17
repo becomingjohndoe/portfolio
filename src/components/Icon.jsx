@@ -17,8 +17,8 @@ const iconContainerStyle = {
 	alignItems: "center",
 };
 
-const Icon = ({ children, name, image }) => {
-	const [show, setShow] = React.useState(false);
+const Icon = ({ children, name, image, show, setShow, index }) => {
+	console.log(show[index]);
 	return (
 		<>
 			{/* icon wrapper */}
@@ -29,7 +29,11 @@ const Icon = ({ children, name, image }) => {
 				<div
 					className="overflow-hidden h-12 w-12 font-semibold rounded-xl border-2 transition ease-in duration-100 transform hover:-translate-y-2 active:translate-y-0 bg-slate-50 mx-0.5 drop-shadow-md mb-1"
 					onClick={() => {
-						setShow(true);
+						setShow((current) => {
+							const newShow = [...current];
+							newShow[index] = !newShow[index];
+							return newShow;
+						});
 					}}
 				>
 					{/* // icon image */}
@@ -40,7 +44,7 @@ const Icon = ({ children, name, image }) => {
 					<circle
 						cx="2"
 						cy="2"
-						r={show ? "2" : "0"}
+						r={show[index] ? "2" : "0"}
 						stroke="black"
 						stroke-width="0"
 						fill="white"

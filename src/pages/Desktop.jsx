@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Icon from "../components/Icon";
 import MusicPlayer from "../components/MusicPlayer";
 import Settings from "../components/Settings";
@@ -6,6 +6,7 @@ import Window from "../components/Window";
 import About from "./About";
 
 const Desktop = () => {
+	const [show, setShow] = useState([true, false, false, false]);
 	const desktop = useRef(null);
 	return (
 		<>
@@ -14,21 +15,24 @@ const Desktop = () => {
 				ref={desktop}
 				className="bounds justify-center flex flex-row h-full relative"
 			>
-				<Window name="About">
+				<Window name="About Me" show={show} index={0} setShow={setShow}>
 					<About />
 				</Window>
 			</div>
 			<div className="h-min flex flex-col content-center">
 				{/* icon bar */}
-				<div className="h-auto w-auto flex bg-slate-700 z-50 opacity-70 justify-center rounded-lg relative mx-4">
+				<div className="h-auto w-auto flex bg-slate-700 z-50 opacity-70 justify-center rounded-lg relative mx-4 mb-2 pt-[-16px]">
 					{/* icon set */}
 					<Icon
 						name="About Me"
 						image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
 						desktop={desktop}
+						show={show}
+						index={0}
+						setShow={setShow}
 					></Icon>
 
-					<Icon
+					{/* <Icon
 						name="Music"
 						image="https://cdn-icons-png.flaticon.com/512/4497/4497920.png"
 						desktop={desktop}
@@ -41,7 +45,7 @@ const Desktop = () => {
 						desktop={desktop}
 					>
 						<Settings />
-					</Icon>
+					</Icon> */}
 				</div>
 			</div>
 		</>

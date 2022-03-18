@@ -7,6 +7,7 @@ import About from "./About";
 
 const Desktop = () => {
 	const [show, setShow] = useState([false, false, false, false]);
+	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
 	const desktop = useRef(null);
 	return (
 		<>
@@ -18,9 +19,12 @@ const Desktop = () => {
 				<Window name="About Me" show={show} index={0} setShow={setShow}>
 					<About />
 				</Window>
+				<Window name="Settings" show={show} index={1} setShow={setShow}>
+					<Settings />
+				</Window>
 			</div>
+			{/* icon bar */}
 			<div className="h-min flex flex-col">
-				{/* icon bar */}
 				<div className="h-auto w-auto flex bg-light-transparent dark:bg-dark-transparent z-50 justify-center rounded-lg relative mx-4 mb-2">
 					{/* icon set */}
 					<Icon
@@ -32,20 +36,14 @@ const Desktop = () => {
 						setShow={setShow}
 					></Icon>
 
-					{/* <Icon
-						name="Music"
-						image="https://cdn-icons-png.flaticon.com/512/4497/4497920.png"
-						desktop={desktop}
-					>
-						<MusicPlayer />
-					</Icon>
 					<Icon
 						name="Settings"
 						image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
 						desktop={desktop}
-					>
-						<Settings />
-					</Icon> */}
+						show={show}
+						index={1}
+						setShow={setShow}
+					></Icon>
 				</div>
 			</div>
 		</>

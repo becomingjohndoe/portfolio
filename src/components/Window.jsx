@@ -13,7 +13,7 @@ const Window = (props) => {
 					scale={1}
 				>
 					{/* window wrapper */}
-					<div className="overflow-hidden rounded-lg hover:z-40 relative h-min">
+					<div className="overflow-hidden rounded-lg h-min absolute">
 						{/* window header */}
 						<div className="flex items-center justify-start p-1 bg-slate-50 dark:bg-slate-700">
 							{/* close, minimize and maximize buttons */}

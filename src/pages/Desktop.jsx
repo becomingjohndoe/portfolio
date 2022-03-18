@@ -8,14 +8,10 @@ import About from "./About";
 const Desktop = () => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
-	const desktop = useRef(null);
 	return (
 		<>
 			{/* desktop */}
-			<div
-				ref={desktop}
-				className="bounds justify-center flex flex-row h-full relative"
-			>
+			<div className="bounds justify-center flex flex-row h-full relative">
 				<Window
 					name="About Me"
 					show={show}
@@ -44,7 +40,6 @@ const Desktop = () => {
 					<Icon
 						name="About Me"
 						image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
-						desktop={desktop}
 						show={show}
 						index={0}
 						setShow={setShow}
@@ -55,7 +50,6 @@ const Desktop = () => {
 					<Icon
 						name="Settings"
 						image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
-						desktop={desktop}
 						show={show}
 						index={1}
 						setShow={setShow}

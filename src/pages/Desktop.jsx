@@ -6,7 +6,7 @@ import Window from "../components/Window";
 import About from "./About";
 
 const Desktop = () => {
-	const [show, setShow] = useState([true, false, false, false]);
+	const [show, setShow] = useState([false, false, false, false]);
 	const desktop = useRef(null);
 	return (
 		<>
@@ -19,9 +19,9 @@ const Desktop = () => {
 					<About />
 				</Window>
 			</div>
-			<div className="h-min flex flex-col content-center">
+			<div className="h-min flex flex-col">
 				{/* icon bar */}
-				<div className="h-auto w-auto flex bg-slate-700 z-50 opacity-70 justify-center rounded-lg relative mx-4 mb-2 pt-[-16px]">
+				<div className="h-auto w-auto flex bg-slate-700 bg- z-50 justify-center rounded-lg relative mx-4 mb-2">
 					{/* icon set */}
 					<Icon
 						name="About Me"

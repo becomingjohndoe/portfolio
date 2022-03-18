@@ -16,10 +16,24 @@ const Desktop = () => {
 				ref={desktop}
 				className="bounds justify-center flex flex-row h-full relative"
 			>
-				<Window name="About Me" show={show} index={0} setShow={setShow}>
+				<Window
+					name="About Me"
+					show={show}
+					index={0}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
 					<About />
 				</Window>
-				<Window name="Settings" show={show} index={1} setShow={setShow}>
+				<Window
+					name="Settings"
+					show={show}
+					index={1}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
 					<Settings />
 				</Window>
 			</div>
@@ -34,6 +48,8 @@ const Desktop = () => {
 						show={show}
 						index={0}
 						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
 					></Icon>
 
 					<Icon
@@ -43,6 +59,8 @@ const Desktop = () => {
 						show={show}
 						index={1}
 						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
 					></Icon>
 				</div>
 			</div>

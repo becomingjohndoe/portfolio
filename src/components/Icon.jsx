@@ -17,7 +17,7 @@ const iconContainerStyle = {
 	alignItems: "center",
 };
 
-const Icon = ({ children, name, image, show, setShow, index }) => {
+const Icon = ({ children, name, image, show, setShow, index, z }) => {
 	console.log(show[index]);
 	return (
 		<>
@@ -35,7 +35,7 @@ const Icon = ({ children, name, image, show, setShow, index }) => {
 					onClick={() => {
 						setShow((current) => {
 							const newShow = [...current];
-							newShow[index] = !newShow[index];
+							newShow[index] = true;
 							return newShow;
 						});
 					}}

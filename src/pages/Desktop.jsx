@@ -21,7 +21,7 @@ const Desktop = () => {
 			</div>
 			<div className="h-min flex flex-col">
 				{/* icon bar */}
-				<div className="h-auto w-auto flex bg-slate-700 bg- z-50 justify-center rounded-lg relative mx-4 mb-2">
+				<div className="h-auto w-auto flex bg-light-transparent dark:bg-dark-transparent z-50 justify-center rounded-lg relative mx-4 mb-2">
 					{/* icon set */}
 					<Icon
 						name="About Me"

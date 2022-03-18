@@ -25,7 +25,7 @@ const Icon = ({ children, name, image, show, setShow, index }) => {
 			<div className="group z-50 flex-col items-center flex w-14  opacity-100 transition ease-in duration-100 transform hover:-translate-y-2">
 				{/* // icon name */}
 				<div className="relative h-0 w-[120%] ">
-					<div className="absolute text-xs text-slate-50 mb-1  bg-slate-600 rounded-md -top-9 whitespace-nowrap border p-1 left-0 right-0 text-center w-auto invisible group-hover:visible">
+					<div className="absolute text-xs text-slate-50 mb-1  bg-light-transparent dark:bg-dark-transparent rounded-md -top-9 whitespace-nowrap border p-1 left-0 right-0 text-center w-auto invisible group-hover:visible">
 						{name}
 					</div>
 				</div>

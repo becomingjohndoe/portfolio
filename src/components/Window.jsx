@@ -1,10 +1,5 @@
 import Draggable from "react-draggable";
-const style = {
-	border: "1px solid #eee",
-	backgroundColor: "white",
-	borderRadius: "5px",
-	overflow: "hidden",
-};
+
 const Window = (props) => {
 	return (
 		<>
@@ -18,9 +13,9 @@ const Window = (props) => {
 					scale={1}
 				>
 					{/* window wrapper */}
-					<div style={style} className="hover:z-40 relative h-min">
+					<div className="overflow-hidden rounded-lg hover:z-40 relative h-min">
 						{/* window header */}
-						<div className="flex items-center justify-start p-1 border-slate-50 dark:border-slate-700">
+						<div className="flex items-center justify-start p-1 bg-slate-50 dark:bg-slate-700">
 							{/* close, minimize and maximize buttons */}
 							<div className="p-1 flex items-left justify-left">
 								<div
@@ -37,9 +32,9 @@ const Window = (props) => {
 								<div className="bg-green-500 m-1 w-3 h-3 rounded-full"></div>
 							</div>
 							{/* window name container && drag handle */}
-							<div className="active:cursor-grab handle h-8 w-full flex  items-center justify-center  left-0">
+							<div className="active:cursor-grab handle h-8 w-full flex  items-center justify-center left-0">
 								{/* window name */}
-								<span className="font-sans text-xs text-gray-500 dark:text-gray-400">
+								<span className="font-sans text-xs text-slate-700 dark:text-slate-50 font-bold">
 									{props.name}
 								</span>
 							</div>

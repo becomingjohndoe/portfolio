@@ -8,7 +8,7 @@ import Desktop from "./pages/Desktop";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App h-screen grid grid-rows-layout  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />

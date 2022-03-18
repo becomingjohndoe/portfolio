@@ -2,22 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Header } from "../components/Header";
 
-const buttonStyle = {
-	borderRadius: "50%",
-	width: "70px",
-	height: "70px",
-	backgroundColor: "#fff",
-	border: "1px solid #eee",
-	marginRight: "10px",
-};
-
-const iconContainerStyle = {
-	display: "flex",
-	flexDirection: "column",
-	alignItems: "center",
-};
-
-const Icon = ({ children, name, image, show, setShow, index, z }) => {
+const Icon = ({
+	children,
+	name,
+	image,
+	show,
+	setShow,
+	index,
+	z,
+	setZIndex,
+}) => {
 	console.log(show[index]);
 	return (
 		<>
@@ -33,10 +27,17 @@ const Icon = ({ children, name, image, show, setShow, index, z }) => {
 				<div
 					className="overflow-hidden h-12 w-12 font-semibold rounded-xl border-2  bg-slate-50 mx-0.5 drop-shadow my-1 "
 					onClick={() => {
-						setShow((current) => {
-							const newShow = [...current];
-							newShow[index] = true;
-							return newShow;
+						if (!show[index]) {
+							setShow((current) => {
+								const newShow = [...current];
+								newShow[index] = true;
+								return newShow;
+							});
+						}
+						setZIndex((current) => {
+							const newZ = current.map(() => 1);
+							newZ[index] = 50;
+							return newZ;
 						});
 					}}
 				>

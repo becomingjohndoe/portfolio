@@ -13,7 +13,18 @@ const Window = (props) => {
 					scale={1}
 				>
 					{/* window wrapper */}
-					<div className="overflow-hidden rounded-lg h-min absolute">
+					<div
+						className={`z-${
+							props.z[props.index]
+						} overflow-hidden rounded-lg h-min absolute`}
+						onPointerDown={() => {
+							props.setZIndex((current) => {
+								const newZ = current.map(() => 1);
+								newZ[props.index] = 50;
+								return newZ;
+							});
+						}}
+					>
 						{/* window header */}
 						<div className="flex items-center justify-start p-1 bg-slate-50 dark:bg-slate-700">
 							{/* close, minimize and maximize buttons */}

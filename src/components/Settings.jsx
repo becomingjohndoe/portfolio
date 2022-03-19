@@ -3,12 +3,12 @@ import ToggleSwitch from "./ToggleSwitch";
 const Settings = ({ bg }) => {
 	return (
 		// setting container
-		<div className="bg-slate-300 dark:bg-slate-600 flex flex-col items-center w-80 p-3">
+		<div className="bg-slate-50 dark:bg-slate-600 flex flex-col items-center w-80 p-3">
 			<div className="text-slate-700 dark:text-slate-50 font-medium">
 				Change Background
 			</div>
 			{/* background selector */}
-			<div className="flex justify-center flex-wrap pt-2">
+			<div className="flex justify-center flex-wrap">
 				{/* button */}
 				<button
 					onClick={() => {
@@ -27,9 +27,14 @@ const Settings = ({ bg }) => {
 				/>
 			</div>
 			{/* Toggle Switch */}
-			<div className="h-50 w-auto p-4">
+			<div className="w-auto p-4">
 				<ToggleSwitch />
 			</div>
+			{/* icon size slider */}
+			<div className="text-slate-700 dark:text-slate-50 font-medium">
+				Icon Size
+			</div>
+			<input type="range" min="0" max="100" className="range range-xs" step="25" />
 		</div>
 	);
 };

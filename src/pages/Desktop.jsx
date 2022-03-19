@@ -5,9 +5,10 @@ import Settings from "../components/Settings";
 import Window from "../components/Window";
 import About from "./About";
 
-const Desktop = () => {
+const Desktop = ({ bg }) => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
+	const iconSizeRef = useRef(null);
 	return (
 		<>
 			{/* desktop */}
@@ -30,7 +31,7 @@ const Desktop = () => {
 					z={zIndex}
 					setZIndex={setZIndex}
 				>
-					<Settings />
+					<Settings bg={bg} />
 				</Window>
 			</div>
 			{/* icon bar */}

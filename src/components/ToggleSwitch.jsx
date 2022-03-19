@@ -14,7 +14,7 @@ const ToggleSwitch = () => {
 						<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
 					</div>
 					{/* <!-- label --> */}
-					<div class="ml-3 text-slate-50 font-medium">Toggle Me!</div>
+					<div class="ml-3 text-slate-50 font-medium">Dark Mode</div>
 				</label>
 			</div>
 		</>

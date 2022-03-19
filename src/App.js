@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
@@ -7,12 +8,16 @@ import { Home } from "./pages/Home";
 import Desktop from "./pages/Desktop";
 
 function App() {
+	const backgroundRef = useRef(null);
 	return (
-		<div className="App h-screen grid grid-rows-layout  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+		<div
+			ref={backgroundRef}
+			className="App h-screen grid grid-rows-layout  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+		>
 			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/desktop" element={<Desktop />} />
+				<Route path="/desktop" element={<Desktop bg={backgroundRef} />} />
 			</Routes>
 		</div>
 	);

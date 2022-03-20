@@ -8,7 +8,9 @@ import About from "./About";
 import doomIcon from "../assets/images/doom-icon.png";
 import pacmanIcon from "../assets/images/pacman-icon.png";
 import PacMan from "../components/PacMan";
-
+import headshot from "../assets/images/headshot.png";
+import logo from "../assets/images/logo.png";
+import settingsIcon from "../assets/images/settingsIcon.png";
 const Desktop = ({ bg }) => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
@@ -65,7 +67,7 @@ const Desktop = ({ bg }) => {
 					{/* icon set */}
 					<Icon
 						name="About Me"
-						image="https://cdn-icons-png.flaticon.com/512/4825/4825044.png"
+						image={logo}
 						show={show}
 						index={0}
 						setShow={setShow}
@@ -75,7 +77,7 @@ const Desktop = ({ bg }) => {
 
 					<Icon
 						name="Settings"
-						image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
+						image={settingsIcon}
 						show={show}
 						index={1}
 						setShow={setShow}

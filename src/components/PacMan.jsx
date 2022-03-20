@@ -1,12 +1,12 @@
 import React from "react";
 import DosPlayer from "./dos.tsx";
 
-function SpaceInvaders() {
+function PacMan() {
 	return (
 		<div className="App" style={{ width: "640px", height: "400px" }}>
-			<DosPlayer bundleUrl="space.jsdos" />
+			<DosPlayer bundleUrl="pacman.jsdos" />
 		</div>
 	);
 }
 
-export default SpaceInvaders;
+export default PacMan;

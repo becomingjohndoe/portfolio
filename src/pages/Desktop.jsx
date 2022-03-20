@@ -7,8 +7,8 @@ import Window from "../components/Window";
 import About from "./About";
 import doomIcon from "../assets/images/doom-icon.png";
 import pacmanIcon from "../assets/images/pacman-icon.png";
-import SpaceInvaders from "../components/SpaceInvaders";
-import spaceinvadersIcon from "../assets/images/spaceinvaders-icon.png";
+import PacMan from "../components/PacMan";
+
 const Desktop = ({ bg }) => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
@@ -56,7 +56,7 @@ const Desktop = ({ bg }) => {
 					z={zIndex}
 					setZIndex={setZIndex}
 				>
-					<SpaceInvaders />
+					<PacMan />
 				</Window>
 			</div>
 			{/* icon bar */}
@@ -94,8 +94,8 @@ const Desktop = ({ bg }) => {
 					></Icon>
 
 					<Icon
-						name="Invaders"
-						image={spaceinvadersIcon}
+						name="PAC MAN"
+						image={pacmanIcon}
 						show={show}
 						index={3}
 						setShow={setShow}

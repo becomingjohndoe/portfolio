@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
@@ -9,7 +9,22 @@ import Desktop from "./pages/Desktop";
 
 function App() {
 	const backgroundRef = useRef(null);
-	return (
+	const [isLoading, setIsLoading] = useState(true);
+
+	const handleLoading = (e) => {
+		console.log(e);
+		setIsLoading(false);
+	};
+
+	useEffect(() => {
+		window.addEventListener("load", handleLoading);
+
+		return () => {
+			window.removeEventListener("load", handleLoading);
+		};
+	}, [isLoading]);
+
+	return !isLoading ? (
 		<div
 			ref={backgroundRef}
 			className="App h-screen grid grid-rows-layout  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -20,6 +35,8 @@ function App() {
 				<Route path="/desktop" element={<Desktop bg={backgroundRef} />} />
 			</Routes>
 		</div>
+	) : (
+		<div>loading</div>
 	);
 }
 

@@ -24,9 +24,7 @@ const Desktop = ({ bg }) => {
 	};
 
 	useEffect(() => {
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
+		setIsLoading(false);
 	}, [isLoading]);
 
 	if (isLoading) {

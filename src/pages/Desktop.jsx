@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
+import Doom from "../components/Doom";
 import Icon from "../components/Icon";
 import MusicPlayer from "../components/MusicPlayer";
 import Settings from "../components/Settings";
 import Window from "../components/Window";
 import About from "./About";
-
+import doomIcon from "../assets/images/doom-icon.png";
+import pacmanIcon from "../assets/images/pacman-icon.png";
+import SpaceInvaders from "../components/SpaceInvaders";
+import spaceinvadersIcon from "../assets/images/spaceinvaders-icon.png";
 const Desktop = ({ bg }) => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
@@ -33,6 +37,27 @@ const Desktop = ({ bg }) => {
 				>
 					<Settings bg={bg} />
 				</Window>
+				<Window
+					name="Doom"
+					show={show}
+					index={2}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
+					<Doom />
+				</Window>
+
+				<Window
+					name="Space Invaders"
+					show={show}
+					index={3}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
+					<SpaceInvaders />
+				</Window>
 			</div>
 			{/* icon bar */}
 			<div className="h-min flex flex-col">
@@ -53,6 +78,26 @@ const Desktop = ({ bg }) => {
 						image="https://cdn-icons-png.flaticon.com/512/5045/5045224.png"
 						show={show}
 						index={1}
+						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
+					></Icon>
+
+					<Icon
+						name="DOOM"
+						image={doomIcon}
+						show={show}
+						index={2}
+						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
+					></Icon>
+
+					<Icon
+						name="Invaders"
+						image={spaceinvadersIcon}
+						show={show}
+						index={3}
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}

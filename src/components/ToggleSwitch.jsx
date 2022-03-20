@@ -1,8 +1,12 @@
 const ToggleSwitch = () => {
 	return (
 		<>
+			{/* <!-- label --> */}
+			<div class="ml-3 text-slate-700 dark:text-slate-50 font-medium">
+				Dark Mode
+			</div>
 			{/* // <!-- Toggle B --> */}
-			<div class="flex items-center justify-center w-full mb-12">
+			<div class="flex items-center justify-center w-full mb-2">
 				<label for="toggleB" class="flex items-center cursor-pointer">
 					{/* <!-- toggle --> */}
 					<div class="relative">
@@ -13,8 +17,6 @@ const ToggleSwitch = () => {
 						{/* <!-- dot --> */}
 						<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
 					</div>
-					{/* <!-- label --> */}
-					<div class="ml-3 text-slate-50 font-medium">Toggle Me!</div>
 				</label>
 			</div>
 		</>

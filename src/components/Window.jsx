@@ -16,7 +16,7 @@ const Window = (props) => {
 					<div
 						className={`z-${
 							props.z[props.index]
-						} overflow-hidden rounded-lg h-min absolute`}
+						} overflow-hidden rounded-lg h-min absolute shadow-2xl`}
 						onPointerDown={() => {
 							props.setZIndex((current) => {
 								const newZ = current.map(() => 1);
@@ -26,7 +26,7 @@ const Window = (props) => {
 						}}
 					>
 						{/* window header */}
-						<div className="flex items-center justify-start p-1 bg-slate-50 dark:bg-slate-700">
+						<div className="flex items-center justify-start p-1 bg-slate-50 dark:bg-slate-700 drop-shadow-md">
 							{/* close, minimize and maximize buttons */}
 							<div className="p-1 flex items-left justify-left">
 								<div

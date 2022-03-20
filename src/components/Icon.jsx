@@ -12,7 +12,6 @@ const Icon = ({
 	z,
 	setZIndex,
 }) => {
-	console.log(show[index]);
 	return (
 		<>
 			{/* icon wrapper */}

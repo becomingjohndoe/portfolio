@@ -5,8 +5,8 @@ import doomIcon from "../assets/images/doom-icon.svg";
 import pacmanIcon from "../assets/images/pacman-icon.svg";
 import settingsIcon from "../assets/images/settingsIcon.svg";
 
-import Loading from "../components/Loading";
 // COMPONENTS
+import Loading from "../components/Loading";
 const Doom = lazy(() => import("../components/Doom"));
 const Icon = lazy(() => import("../components/Icon"));
 const Settings = lazy(() => import("../components/Settings"));

@@ -8,18 +8,19 @@
 		<meta name="description" content="A portfolio website to showcase my work" />
 
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link rel="stylesheet" href="%PUBLIC_URL%/loader.css" />
 
-		<!-- JS DOS -->
-
-		<link rel="stylesheet" href="%PUBLIC_URL%/js-dos/js-dos.css" />
 		<title>Karl Swatman | Full Stack Developer</title>
 	</head>
-	<body>
+	<body style="background-color: #000000">
 		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div class="loader"></div>
 		<div id="root"></div>
+		<!-- JS DOS -->
+		<link rel="stylesheet" href="%PUBLIC_URL%/js-dos/js-dos.css" />
+		<script src="%PUBLIC_URL%/js-dos/js-dos.js"></script>
+		<script>
+			emulators.pathPrefix = "%PUBLIC_URL%/js-dos/";
+		</script>
 	</body>
-	<script src="%PUBLIC_URL%/js-dos/js-dos.js"></script>
-	<script>
-		emulators.pathPrefix = "%PUBLIC_URL%/js-dos/";
-	</script>
 </html>

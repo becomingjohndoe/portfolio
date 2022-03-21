@@ -1,27 +1,24 @@
-import { useRef, useState, useEffect } from "react";
-import Doom from "../components/Doom";
-import Icon from "../components/Icon";
-import MusicPlayer from "../components/MusicPlayer";
-import Settings from "../components/Settings";
-import Window from "../components/Window";
-import About from "./About";
-import doomIcon from "../assets/images/doom-icon.png";
-import pacmanIcon from "../assets/images/pacman-icon.png";
-import PacMan from "../components/PacMan";
-import headshot from "../assets/images/headshot.png";
-import logo from "../assets/images/logo.png";
-import settingsIcon from "../assets/images/settingsIcon.png";
+import { useRef, useState, useEffect, lazy, Suspense } from "react";
+// ICONS
+import logo from "../assets/images/logo.svg";
+import doomIcon from "../assets/images/doom-icon.svg";
+import pacmanIcon from "../assets/images/pacman-icon.svg";
+import settingsIcon from "../assets/images/settingsIcon.svg";
+
 import Loading from "../components/Loading";
+// COMPONENTS
+const Doom = lazy(() => import("../components/Doom"));
+const Icon = lazy(() => import("../components/Icon"));
+const Settings = lazy(() => import("../components/Settings"));
+const Window = lazy(() => import("../components/Window"));
+const PacMan = lazy(() => import("../components/PacMan"));
+const About = lazy(() => import("./About"));
+
 const Desktop = ({ bg }) => {
 	const [show, setShow] = useState([false, false, false, false]);
 	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
 	const [isLoading, setIsLoading] = useState(true);
 	const iconSizeRef = useRef(null);
-
-	const handleLoading = (e) => {
-		console.log(e);
-		setIsLoading(false);
-	};
 
 	useEffect(() => {
 		setIsLoading(false);
@@ -31,9 +28,11 @@ const Desktop = ({ bg }) => {
 		return <Loading />;
 	} else {
 		return (
-			<>
+			<Suspense fallback={<div>Loading...</div>}>
 				{/* desktop */}
 				<div className="bounds justify-center flex flex-row h-full relative">
+					{/* windows */}
+					{/* About */}
 					<Window
 						name="About Me"
 						show={show}
@@ -44,6 +43,7 @@ const Desktop = ({ bg }) => {
 					>
 						<About />
 					</Window>
+					{/* Settings */}
 					<Window
 						name="Settings"
 						show={show}
@@ -54,6 +54,7 @@ const Desktop = ({ bg }) => {
 					>
 						<Settings bg={bg} />
 					</Window>
+					{/* Doom */}
 					<Window
 						name="Doom"
 						show={show}
@@ -64,9 +65,9 @@ const Desktop = ({ bg }) => {
 					>
 						<Doom />
 					</Window>
-
+					{/* PacMan */}
 					<Window
-						name="Space Invaders"
+						name="Pac Man"
 						show={show}
 						index={3}
 						setShow={setShow}
@@ -121,7 +122,7 @@ const Desktop = ({ bg }) => {
 						></Icon>
 					</div>
 				</div>
-			</>
+			</Suspense>
 		);
 	}
 };

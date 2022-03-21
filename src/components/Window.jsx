@@ -1,8 +1,9 @@
-import Draggable from "react-draggable";
+import { Suspense, lazy } from "react/cjs/react.production.min";
+const Draggable = lazy(() => import("react-draggable"));
 
 const Window = (props) => {
 	return (
-		<>
+		<Suspense fallback={<div>Loading...</div>}>
 			{props.show[props.index] ? (
 				<Draggable
 					bounds="parent"
@@ -16,7 +17,7 @@ const Window = (props) => {
 					<div
 						className={`z-${
 							props.z[props.index]
-						} overflow-hidden rounded-lg h-min absolute shadow-2xl`}
+						} overflow-hidden rounded-lg absolute shadow-2xl max-w-full `}
 						onPointerDown={() => {
 							props.setZIndex((current) => {
 								const newZ = current.map(() => 1);
@@ -55,7 +56,7 @@ const Window = (props) => {
 					</div>
 				</Draggable>
 			) : null}
-		</>
+		</Suspense>
 	);
 };
 

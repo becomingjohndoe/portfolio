@@ -1,8 +1,9 @@
-import Draggable from "react-draggable";
+import { Suspense, lazy } from "react/cjs/react.production.min";
+const Draggable = lazy(() => import("react-draggable"));
 
 const Window = (props) => {
 	return (
-		<>
+		<Suspense fallback={<div>Loading...</div>}>
 			{props.show[props.index] ? (
 				<Draggable
 					bounds="parent"
@@ -55,7 +56,7 @@ const Window = (props) => {
 					</div>
 				</Draggable>
 			) : null}
-		</>
+		</Suspense>
 	);
 };
 

@@ -22,8 +22,8 @@ const Window = (props) => {
 						} overflow-hidden rounded-lg absolute shadow-2xl max-w-full `}
 						onPointerDown={() => {
 							props.setZIndex((current) => {
-								const newZ = current.map(() => 1);
-								newZ[props.index] = 50;
+								const newZ = current.map(() => 10);
+								newZ[props.index] = 30;
 								return newZ;
 							});
 						}}

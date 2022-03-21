@@ -33,7 +33,7 @@ const Icon = ({
 						}
 						setZIndex((current) => {
 							const newZ = current.map(() => 1);
-							newZ[index] = 50;
+							newZ[index] = 30;
 							return newZ;
 						});
 					}}

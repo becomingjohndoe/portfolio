@@ -9,9 +9,9 @@ interface PlayerProps {
 }
 
 function DosPlayer(props: PlayerProps) {
-	const rootRef = useRef<HTMLDivElement>(null);
+	const rootRef = useRef(null);
 
-	const [dos, setDos] = useState<Instance | null>(null);
+	const [dos, setDos] = useState(null);
 
 	useEffect(() => {
 		if (rootRef === null || rootRef.current === null) {

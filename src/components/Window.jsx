@@ -3,7 +3,9 @@ const Draggable = lazy(() => import("react-draggable"));
 
 const Window = (props) => {
 	return (
-		<Suspense fallback={<div>Loading...</div>}>
+		<Suspense
+			fallback={<div className="h-screen w-screen cursor-wait absolute"></div>}
+		>
 			{props.show[props.index] ? (
 				<Draggable
 					bounds="parent"

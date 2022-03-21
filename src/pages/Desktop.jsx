@@ -4,6 +4,9 @@ import logo from "../assets/images/logo.svg";
 import doomIcon from "../assets/images/doom-icon.svg";
 import pacmanIcon from "../assets/images/pacman-icon.svg";
 import settingsIcon from "../assets/images/settingsIcon.svg";
+import skillsicon from "../assets/images/skills-icon.svg";
+import worksIcon from "../assets/images/code.png";
+import musicIcon from "../assets/images/musicIcon.png";
 
 // COMPONENTS
 const Doom = lazy(() => import("../components/Doom"));
@@ -12,10 +15,13 @@ const Settings = lazy(() => import("../components/Settings"));
 const Window = lazy(() => import("../components/Window"));
 const PacMan = lazy(() => import("../components/PacMan"));
 const About = lazy(() => import("./About"));
+const Skills = lazy(() => import("../components/Skills"));
+const Works = lazy(() => import("../components/Works"));
+const MusicPlayer = lazy(() => import("../components/MusicPlayer"));
 
 const Desktop = ({ bg }) => {
-	const [show, setShow] = useState([false, false, false, false]);
-	const [zIndex, setZIndex] = useState([1, 1, 1, 1]);
+	const [show, setShow] = useState([false, false, false, false, false, false]);
+	const [zIndex, setZIndex] = useState([0, 0, 0, 0, 0, 0]);
 	const iconSizeRef = useRef(null);
 
 	return (
@@ -69,6 +75,39 @@ const Desktop = ({ bg }) => {
 				>
 					<PacMan />
 				</Window>
+				{/* Skills */}
+				<Window
+					name="Skills"
+					show={show}
+					index={4}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
+					<Skills />
+				</Window>
+				{/* Works */}
+				<Window
+					name="Works"
+					show={show}
+					index={5}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
+					<Works />
+				</Window>
+				{/* Music Player */}
+				<Window
+					name="Music Player"
+					show={show}
+					index={6}
+					setShow={setShow}
+					z={zIndex}
+					setZIndex={setZIndex}
+				>
+					<MusicPlayer />
+				</Window>
 			</div>
 			{/* icon bar */}
 			<div className="h-min flex flex-col">
@@ -109,6 +148,36 @@ const Desktop = ({ bg }) => {
 						image={pacmanIcon}
 						show={show}
 						index={3}
+						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
+					></Icon>
+
+					<Icon
+						name="Skills"
+						image={skillsicon}
+						show={show}
+						index={4}
+						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
+					></Icon>
+
+					<Icon
+						name="Works"
+						image={worksIcon}
+						show={show}
+						index={5}
+						setShow={setShow}
+						z={zIndex}
+						setZIndex={setZIndex}
+					></Icon>
+
+					<Icon
+						name="Music"
+						image={musicIcon}
+						show={show}
+						index={6}
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}

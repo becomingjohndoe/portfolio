@@ -4,6 +4,7 @@ import "./App.css";
 // COMPONENTS
 import NavBar from "./components/NavBar";
 import Desktop from "./pages/Desktop";
+
 function App() {
 	const loader = document.querySelector(".loader");
 	const backgroundRef = useRef(null);

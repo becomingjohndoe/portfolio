@@ -1077,10 +1077,6 @@ hr {
  * https://github.com/tailwindcss/tailwindcss/issues/362
  */
 
-img {
-	border-style: solid;
-}
-
 textarea {
 	resize: vertical;
 }
@@ -1183,7 +1179,6 @@ samp {
  *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 
-img,
 svg,
 video,
 canvas,
@@ -1204,7 +1199,6 @@ object {
  * https://github.com/mozdevs/cssremedy/issues/14
  */
 
-img,
 video {
 	max-width: 100%;
 	height: auto;
@@ -1405,10 +1399,6 @@ video {
 	height: 2rem;
 }
 
-.h-12 {
-	height: 3rem;
-}
-
 .max-h-72 {
 	max-height: 18rem;
 }
@@ -1427,10 +1417,6 @@ video {
 
 .w-8 {
 	width: 2rem;
-}
-
-.w-10 {
-	width: 2.5rem;
 }
 
 .w-14 {

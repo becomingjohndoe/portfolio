@@ -24,9 +24,9 @@ const Works = () => {
 		<>
 			<div className="flex flex-col grow">
 				<div class=" bg-base-100 rounded-none flex flex-col sm:flex-row grow">
-					<div className="shrink">
+					<div className="">
 						<img
-							className="inline object-cover"
+							className="object-cover max-h-72 w-full"
 							src={details[selected].image}
 							alt="Movie"
 						/>

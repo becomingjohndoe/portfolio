@@ -2,16 +2,16 @@ import headshot from "../assets/images/headshot.png";
 
 const About = () => {
 	return (
-		<div className="">
-			<figure className="p-3 md:flex bg-gradient-to-r from-cyan-500 to-orange-100 pl-6 dark:from-slate-500 dark:to-teal-900 m-0">
+		<div className="h-full sm:w-96 flex flex-col">
+			<figure className=" flex flex-col h-full p-3 bg-gradient-to-r from-cyan-500 to-orange-100 pl-6 dark:from-slate-500 dark:to-teal-900 m-0">
 				<img
 					className="bg-slate-100 max-w-32 max-h-32 rounded-full m-auto"
 					src={headshot}
 					alt=""
 				/>
-				<div className="p-8 text-center md:text-left">
-					<blockquote>
-						<p className="text-md text-left font-medium overflow-scroll max-h-48 max-w-sm marker: dark:text-slate-100 mb-2 pr-2">
+				<div className=" flex flex-col p-8 text-center md:text-left h-full">
+					<blockquote className="grow flex flex-col">
+						<p className="text-md text-left font-medium  overflow-scroll sm:h-48 h-72 marker:dark:text-slate-100 mb-2 pr-2 grow">
 							Hi Im Karl a Software Engineer based in Yorskhire
 							<br />
 							<br />I have been working through the very intense but valuable

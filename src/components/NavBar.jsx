@@ -1,43 +1,38 @@
-// return
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import logo from "../assets/images/logo.png";
-import octocat from "../assets/images/Octocat.png";
-import github from "../assets/images/GitHub-Mark-64px.png";
-import React from "react";
-export const NavBar = () => {
-	return (
-		<Navbar variant="dark">
-			<Container>
-				<Nav>
-					<Nav.Link href="/#" active>
-						Work
-					</Nav.Link>
-					<Nav.Link href="#about">About</Nav.Link>
-					<Nav.Link href="#contact">Contact</Nav.Link>
-				</Nav>
-				<Navbar.Brand href="#home">
-					<img
-						alt=""
-						src={logo}
-						width="30"
-						height="30"
-						className="d-inline-block align-center"
-					/>
-				</Navbar.Brand>
+import logo from "../assets/images/logo.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import github from "../assets/images/github.svg";
 
-				<a href="https://github.com/becomingjohndoe" target="_blank">
-					<img
-						alt=""
-						src={github}
-						width="30"
-						height="30"
-						className="align-right"
-						style={{ background: "#fff", borderRadius: "50%" }}
-					/>
-				</a>
-			</Container>
-		</Navbar>
+const NavBar = () => {
+	return (
+		<div className="flex flex-row h-auto bg-light-transparent dark:bg-dark-transparent items-center">
+			<div className="flex px-2 py-1 items-center">
+				<img src={logo} alt="" className="h-6 rounded-full " />
+				<div className="text-xs text-slate-700 font-bold pl-1 dark:text-slate-50">
+					Karl Swatman
+				</div>
+				<div className="dropdown hover:cursor-pointer ml-2">
+					<div tabindex="0" class=" text-xs p-1 text-slate-700 dark:text-slate-50">
+						Details
+					</div>
+					<ul
+						tabindex="0"
+						class="dropdown-content menu  mt-1 w-52 bg-dark-transparent text-xs z-50"
+					>
+						<li>
+							<a>Item 1</a>
+						</li>
+						<li>
+							<a>Item 2</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div className="flex grow justify-end gap-2 mr-2">
+				<img src={linkedin} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+				<img src={github} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+			</div>
+		</div>
 	);
 };
+
+export default NavBar;

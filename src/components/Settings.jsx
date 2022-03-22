@@ -3,7 +3,7 @@ import ToggleSwitch from "./ToggleSwitch";
 const Settings = ({ bg }) => {
 	return (
 		// setting container
-		<div className="bg-slate-50 dark:bg-slate-600 flex flex-col items-center w-80 p-3">
+		<div className="bg-slate-50 dark:bg-slate-600 flex flex-col items-center sm:w-80 p-3 h-full w-full">
 			<div className="text-slate-700 dark:text-slate-50 font-medium">
 				Change Background
 			</div>

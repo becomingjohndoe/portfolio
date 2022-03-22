@@ -1409,10 +1409,6 @@ video {
 	height: 3rem;
 }
 
-.h-full {
-	height: 100%;
-}
-
 .max-h-72 {
 	max-height: 18rem;
 }
@@ -1447,10 +1443,6 @@ video {
 
 .w-64 {
 	width: 16rem;
-}
-
-.w-full {
-	width: 100%;
 }
 
 .flex-shrink {
@@ -1569,14 +1561,6 @@ video {
 
 .grid-cols-2 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.flex-row {
-	flex-direction: row;
-}
-
-.flex-col {
-	flex-direction: column;
 }
 
 .flex-wrap {

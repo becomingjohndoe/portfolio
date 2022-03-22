@@ -22,25 +22,17 @@ const Works = () => {
 	const [selected, setSelected] = useState(0);
 	return (
 		<>
-			<div className="flex">
-				{/* <div className="flex h-96 w-96">
-				<div className=""
-					<img className="" src={details[selected].image} alt="" />
-				</div>
-				<div className="p-2">
-					<div className="">{details[selected].title}</div>
-					<div>{details[selected].description}</div>
-				</div>
-			</div> */}
-				<div class="bg-base-100 rounded-none flex lg:flex-row md:flex-col sm:flex-col">
-					<figure>
+			<div className="flex flex-col grow">
+				<div class=" bg-base-100 rounded-none flex flex-col sm:flex-row grow">
+					<div className="shrink">
 						<img
-							className="object-cover h-96 w-96"
+							className="inline object-cover"
 							src={details[selected].image}
 							alt="Movie"
 						/>
-					</figure>
-					<div class="w-96 p-4 flex flex-col">
+					</div>
+
+					<div class="w-96 p-4 flex flex-col mx-auto">
 						<h2 class="card-title">{details[selected].title}</h2>
 						<p>{details[selected].description}</p>
 						<div class="self-end">
@@ -48,28 +40,28 @@ const Works = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="btn-group grid grid-cols-2">
-				<button
-					onClick={() => {
-						if (selected !== 0) {
-							setSelected(selected - 1);
-						}
-					}}
-					class="btn rounded-none"
-				>
-					Previous
-				</button>
-				<button
-					onClick={() => {
-						if (selected !== details.length - 1) {
-							setSelected(selected + 1);
-						}
-					}}
-					class="btn rounded-none"
-				>
-					Next
-				</button>
+				<div class="btn-group grid grid-cols-2">
+					<button
+						onClick={() => {
+							if (selected !== 0) {
+								setSelected(selected - 1);
+							}
+						}}
+						class="btn rounded-none"
+					>
+						Previous
+					</button>
+					<button
+						onClick={() => {
+							if (selected !== details.length - 1) {
+								setSelected(selected + 1);
+							}
+						}}
+						class="btn rounded-none"
+					>
+						Next
+					</button>
+				</div>
 			</div>
 		</>
 	);

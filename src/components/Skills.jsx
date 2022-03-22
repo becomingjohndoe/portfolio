@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 
 const Skills = () => {
 	return (
-		<div className="max-w-md p-2 content-center bg-indigo-400 max-h-full">
+		<div className="sm:w-96 p-2 content-center bg-indigo-400 h-full w-full overflow-scroll">
 			<button className="h-12 bg-indigo-500 mb-3 p-2 rounded-sm text-slate-50 font-bold">
 				<a href="/somefile.txt" download>
 					Download CV
 				</a>
 			</button>
-			<p className="flex flex-wrap items-center justify-center gap-5 border p-2 rounded-sm overflow-scroll h-64 text-sm text-slate-50">
-				{" "}
+			<p className="flex flex-wrap items-center justify-center h-full w-full gap-2 border p-2 rounded-sm overflow-scroll text-sm text-slate-50">
 				<a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
 						alt="bootstrap"
@@ -19,52 +17,47 @@ const Skills = () => {
 						height="60"
 					/>
 					Boostrap
-				</a>{" "}
+				</a>
 				<a href="https://www.chartjs.org" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://www.chartjs.org/media/logo-title.svg"
 						alt="chartjs"
 						width="60"
 						height="60"
-					/>{" "}
-				</a>{" "}
+					/>
+				</a>
 				<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
 						alt="css3"
 						width="60"
 						height="60"
-					/>{" "}
-				</a>{" "}
+					/>
+				</a>
 				<a href="https://expressjs.com" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
 						alt="express"
 						width="60"
 						height="60"
-					/>{" "}
-				</a>{" "}
+					/>
+				</a>
 				<a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
 						alt="firebase"
 						width="60"
 						height="60"
-					/>{" "}
-				</a>{" "}
+					/>
+				</a>
 				<a href="https://cloud.google.com" target="_blank" rel="noreferrer">
-					{" "}
 					<img
 						src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
 						alt="gcp"
 						width="60"
 						height="60"
-					/>{" "}
-				</a>{" "}
+					/>
+				</a>
 				<a href="https://git-scm.com/" target="_blank" rel="noreferrer">
 					{" "}
 					<img

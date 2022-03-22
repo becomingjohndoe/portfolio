@@ -19,7 +19,7 @@ const Window = (props) => {
 					<div
 						className={`z-${
 							props.z[props.index]
-						} overflow-hidden rounded-lg absolute shadow-2xl max-w-full `}
+						} overflow-hidden rounded-lg absolute shadow-2xl w-full h-full sm:h-auto sm:w-auto flex flex-col`}
 						onPointerDown={() => {
 							props.setZIndex((current) => {
 								const newZ = current.map(() => 10);

@@ -26,7 +26,7 @@ const Works = () => {
 				<div class=" bg-base-100 rounded-none flex flex-col sm:flex-row grow">
 					<div className="">
 						<img
-							className="object-cover max-h-72 w-full"
+							className="object-cover max-h-72 w-full sm:w-96 "
 							src={details[selected].image}
 							alt="Movie"
 						/>

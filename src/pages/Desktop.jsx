@@ -121,6 +121,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-slate-50"
 					></Icon>
 
 					<Icon
@@ -131,6 +132,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-red-400"
 					></Icon>
 
 					<Icon
@@ -141,6 +143,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-orange-300"
 					></Icon>
 
 					<Icon
@@ -151,6 +154,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-slate-700"
 					></Icon>
 
 					<Icon
@@ -161,6 +165,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-indigo-500"
 					></Icon>
 
 					<Icon
@@ -171,6 +176,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-slate-400"
 					></Icon>
 
 					<Icon
@@ -181,6 +187,7 @@ const Desktop = ({ bg }) => {
 						setShow={setShow}
 						z={zIndex}
 						setZIndex={setZIndex}
+						bg="bg-blue-200"
 					></Icon>
 				</div>
 			</div>

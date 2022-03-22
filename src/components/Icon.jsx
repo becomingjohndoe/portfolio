@@ -9,6 +9,7 @@ const Icon = ({
 	index,
 	z,
 	setZIndex,
+	bg,
 }) => {
 	return (
 		<>
@@ -16,13 +17,13 @@ const Icon = ({
 			<div className="group z-50 flex-col items-center flex w-14  opacity-100 transition ease-in duration-100 transform hover:-translate-y-2">
 				{/* // icon name */}
 				<div className="relative h-0 w-[120%] ">
-					<div className="absolute text-xs text-slate-50 mb-1  bg-light-transparent dark:bg-dark-transparent rounded-md -top-9 whitespace-nowrap border p-1 left-0 right-0 text-center w-auto invisible group-hover:visible">
+					<div className="absolute text-xs text-slate-700 dark:text-slate-50 mb-1  bg-light-transparent dark:bg-dark-transparent rounded-md -top-9 whitespace-nowrap border p-1 left-0 right-0 text-center w-auto invisible group-hover:visible">
 						{name}
 					</div>
 				</div>
 				{/* // icon */}
 				<div
-					className="overflow-hidden h-12 w-12 font-semibold rounded-xl border-2  bg-slate-50 mx-0.5 drop-shadow my-1 "
+					className={`overflow-hidden h-12 w-12 font-semibold rounded-xl ${bg} mx-0.5 drop-shadow my-1`}
 					onClick={() => {
 						if (!show[index]) {
 							setShow((current) => {

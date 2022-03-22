@@ -34,7 +34,14 @@ const Settings = ({ bg }) => {
 			<div className="text-slate-700 dark:text-slate-50 font-medium">
 				Icon Size
 			</div>
-			<input type="range" min="0" max="100" className="range range-xs" step="25" />
+			<input
+				defaultValue={25}
+				type="range"
+				min="0"
+				max="100"
+				className="range range-xs"
+				step="25"
+			/>
 		</div>
 	);
 };

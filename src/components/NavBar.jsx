@@ -1,4 +1,6 @@
 import logo from "../assets/images/logo.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import github from "../assets/images/github.svg";
 
 const NavBar = () => {
 	return (
@@ -9,7 +11,7 @@ const NavBar = () => {
 					Karl Swatman
 				</div>
 				<div className="dropdown hover:cursor-pointer ml-2">
-					<div tabindex="0" class=" text-xs p-1 text-slate-50">
+					<div tabindex="0" class=" text-xs p-1 text-slate-700 dark:text-slate-50">
 						Details
 					</div>
 					<ul
@@ -24,25 +26,10 @@ const NavBar = () => {
 						</li>
 					</ul>
 				</div>
-				<div className="dropdown hover:cursor-pointer ml-2">
-					<div tabindex="0" class=" text-xs p-1 text-slate-50">
-						Desktop
-					</div>
-					<ul
-						tabindex="0"
-						class="dropdown-content menu  mt-1 w-52 bg-dark-transparent text-xs z-50"
-					>
-						<li>
-							<a>Item 1</a>
-						</li>
-						<li>
-							<a>Item 2</a>
-						</li>
-					</ul>
-				</div>
 			</div>
-			<div className="flex grow justify-end">
-				<img src={logo} alt="" className="h-6" />
+			<div className="flex grow justify-end gap-2 mr-2">
+				<img src={linkedin} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+				<img src={github} alt="" className="h-6 rounded-md dark:bg-slate-50" />
 			</div>
 		</div>
 	);

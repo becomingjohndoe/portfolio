@@ -32,7 +32,7 @@ const DateTime = () => {
 	});
 
 	return (
-		<div className="text-sm">
+		<div className="text-sm text-slate-700 dark:text-slate-50">
 			{date}
 			{time}
 		</div>

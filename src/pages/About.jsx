@@ -11,7 +11,7 @@ const About = () => {
 				/>
 				<div className=" flex flex-col p-8 text-center md:text-left h-full">
 					<blockquote className="grow flex flex-col">
-						<p className="text-md text-left font-medium  overflow-scroll sm:h-48 h-72 marker:dark:text-slate-100 mb-2 pr-2 grow">
+						<p className="text-md text-left font-medium  overflow-auto sm:h-48 h-72 marker:dark:text-slate-100 mb-2 pr-2 grow">
 							Hi Im Karl a Software Engineer based in Yorskhire
 							<br />
 							<br />I have been working through the very intense but valuable

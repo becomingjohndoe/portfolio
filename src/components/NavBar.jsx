@@ -28,8 +28,16 @@ const NavBar = () => {
 				</div>
 			</div>
 			<div className="flex grow justify-end gap-2 mr-2">
-				<img src={linkedin} alt="" className="h-6 rounded-md dark:bg-slate-50" />
-				<img src={github} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+				<a
+					href="https://www.linkedin.com/in/karl-swatman-43b2a0ab/"
+					target="__blank"
+				>
+					<img src={linkedin} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+				</a>
+				<a href="https://github.com/becomingjohndoe" target="__blank">
+					{" "}
+					<img src={github} alt="" className="h-6 rounded-md dark:bg-slate-50" />
+				</a>
 			</div>
 		</div>
 	);

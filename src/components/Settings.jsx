@@ -9,7 +9,7 @@ const Settings = ({ bg }) => {
 			</div>
 			{/* background selector */}
 			<div className="flex justify-center flex-wrap">
-				{/* button */}
+				{/* background orange */}
 				<button
 					onClick={() => {
 						bg.current.className =
@@ -17,7 +17,7 @@ const Settings = ({ bg }) => {
 					}}
 					className="h-20 w-20 bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-700 focus:border-4 m-1"
 				/>
-				{/* button */}
+				{/* background red */}
 				<button
 					onClick={() => {
 						bg.current.className =
@@ -39,7 +39,7 @@ const Settings = ({ bg }) => {
 				type="range"
 				min="0"
 				max="100"
-				className="range range-xs"
+				className="range range-md"
 				step="25"
 			/>
 		</div>

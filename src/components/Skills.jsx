@@ -4,7 +4,7 @@ const Skills = () => {
 	return (
 		<div className="sm:w-96 p-2 content-center bg-indigo-400 h-full w-full overflow-scroll">
 			<button className="h-12 bg-indigo-500 mb-3 p-2 rounded-sm text-slate-50 font-bold">
-				<a href="/somefile.txt" download>
+				<a href="/Karl Swatman CV.pdf" download>
 					Download CV
 				</a>
 			</button>

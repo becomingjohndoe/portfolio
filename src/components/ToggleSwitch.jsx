@@ -15,7 +15,11 @@ const ToggleSwitch = () => {
 					{/* <!-- toggle --> */}
 					<div class="relative">
 						{/* <!-- input --> */}
-						<input type="checkbox" id="toggleB" class="sr-only" />
+						{theme === "light" ? (
+							<input type="checkbox" id="toggleB" class="sr-only" />
+						) : (
+							<input type="checkbox" id="toggleB" class="sr-only" defaultChecked />
+						)}
 						{/* <!-- line --> */}
 						<div
 							onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

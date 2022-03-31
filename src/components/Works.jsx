@@ -2,8 +2,28 @@ import { useState } from "react";
 
 import wordle from "../assets/images/not-wordle.png";
 import stonks from "../assets/images/paper-stocks.png";
-
+import toppit from "../assets/images/toppit.png";
+import toppitApi from "../assets/images/toppit-api.png";
+import gandsum from "../assets/images/gandsum.png";
+import giggle from "../assets/images/giggle.png";
 const details = [
+	{
+		title: "Gandsum",
+		description:
+			"A text placeholder generator, with Gandalf quotes instead of Lorem Ipsum",
+		technologies: ["React", "TailwindCSS"],
+		image: gandsum,
+		link: "https://github.com/becomingjohndoe/gimme-gandalf",
+		play: "https://gandsum.netlify.app/",
+	},
+	{
+		title: "Giggle",
+		description: "A friend finder for Gigs and Events",
+		technologies: ["React Native", "Firebase"],
+		image: giggle,
+		link: "https://github.com/becomingjohndoe/NC-Giggle",
+		play: "https://github.com/becomingjohndoe/NC-Giggle",
+	},
 	{
 		title: "Not Wordle",
 		description:
@@ -22,6 +42,24 @@ const details = [
 		link: "https://github.com/becomingjohndoe/paper-stocks",
 		play: "https://paper-stocks.netlify.app/",
 	},
+	{
+		title: "Toppit - Reddit Clone",
+		description:
+			"A clone of the popular social media platform Reddit. Users can create an account, login, post, comment and vote on posts",
+		technologies: ["React"],
+		image: toppit,
+		link: "https://github.com/becomingjohndoe/news-frontend",
+		play: "https://toppit.netlify.app/",
+	},
+	{
+		title: "RESTful API for Toppit",
+		description:
+			"A RESTful API for Toppit. Users can create an account, login, post, comment and vote on posts",
+		technologies: ["Express", "PostgreSQL", "Jest"],
+		image: toppitApi,
+		link: "https://github.com/becomingjohndoe/news-api",
+		play: "https://news-nc-api.herokuapp.com/api/",
+	},
 ];
 
 const Works = () => {
@@ -34,7 +72,7 @@ const Works = () => {
 					{/* Image */}
 					<div className="">
 						<img
-							className="object-cover max-h-72 w-full sm:w-96 "
+							className="object-cover max-h-96 sm:max-h-fit  w-full sm:w-96 "
 							src={details[selected].image}
 							alt="Movie"
 						/>

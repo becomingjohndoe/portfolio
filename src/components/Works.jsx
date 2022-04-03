@@ -6,7 +6,17 @@ import toppit from "../assets/images/toppit.png";
 import toppitApi from "../assets/images/toppit-api.png";
 import gandsum from "../assets/images/gandsum.png";
 import giggle from "../assets/images/giggle.png";
+import wordleSolver from "../assets/images/wordle-solver.png";
 const details = [
+	{
+		title: "Wordle SOlver",
+		description:
+			"Take all the fun out of solving Wordle puzzles. Solve them with a simple algorithm",
+		technologies: ["React", "TailwindCSS"],
+		image: wordleSolver,
+		link: "https://github.com/becomingjohndoe/wordle-solver",
+		play: "https://wordle-finder.netlify.app/",
+	},
 	{
 		title: "Gandsum",
 		description:

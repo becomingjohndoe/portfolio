@@ -82,7 +82,7 @@ const Works = () => {
 					{/* Image */}
 					<div className="">
 						<img
-							className="object-cover max-h-96 sm:max-h-fit  w-full sm:w-96 "
+							className="object-cover sm:object-contain h-72 sm:h-96  w-full sm:w-96"
 							src={details[selected].image}
 							alt="Movie"
 						/>
